@@ -1,0 +1,232 @@
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    /* ปรับขนาดของปุ่มในหน้าพิมพ์ */
+    button {
+        display: none; /* ซ่อนปุ่มเมื่อพิมพ์ */
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+body {
+    background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;;
+    display: block; /* เพิ่มให้แน่ใจว่าแสดง */
+}
+
+button {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ff332c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 660px;
+    margin-top: -30px;
+}
+
+.scroll-popup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ */
+    display: none; /* เริ่มต้นซ่อน */
+}
+
+
+.result,
+.result2 {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 800px; /* จำกัดขนาดไม่ให้เกิน 800px */
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: auto; /* เพิ่ม Scrollbar หากเนื้อหายาวเกิน */
+}
+
+.result2 {
+    background: rgba(255, 240, 240, 0.8); /* สีพื้นหลังที่ต่างกันเพื่อแยกตาราง */
+    width: 800px; /* ทำให้ตารางเต็มขนาด */
+}
+
+/* สไตล์สำหรับตาราง */
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.minimal-table th,
+.minimal-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* ทำให้ข้อความยาวถูกตัดเป็นบรรทัดใหม่ */
+}
+
+.minimal-table th {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+.minimal-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.minimal-table tr:hover {
+    background: rgba(0, 150, 136, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* จัดการปัญหาภาพ Logo ที่อาจใหญ่เกินไป */
+.logo img {
+    max-width: 100%; /* จำกัดขนาดภาพให้อยู่ในกรอบ */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* เพิ่มระยะห่างระหว่าง result และ result2 */
+    overflow: auto; /* เพิ่ม scroll bar ถ้าขนาดเกิน */
+}
+
+
+button {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #ff332c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    right: 20px;
+    margin-top: -30px;
+    white-space: nowrap;  /* ป้องกันไม่ให้ข้อความในปุ่มเว้นบรรทัด */
+}
+
+.scroll-popup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ */
+    display: none; /* เริ่มต้นซ่อน */
+}
+
+
+.result,
+.result2 {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 800px; /* จำกัดขนาดไม่ให้เกิน 800px */
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow: auto; /* เพิ่ม Scrollbar หากเนื้อหายาวเกิน */
+}
+
+.result2 {
+    background: rgba(255, 240, 240, 0.8); /* สีพื้นหลังที่ต่างกันเพื่อแยกตาราง */
+    max-width: 380px; 
+    width: 100%;  /* กำหนดให้ใช้ขนาดที่ 100% ของ container */
+    box-sizing: border-box; /* ให้ padding และ border นับรวมกับ width */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินออกจากขอบ */
+}
+
+
+/* สไตล์สำหรับตาราง */
+.minimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.minimal-table th,
+.minimal-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* ทำให้ข้อความยาวถูกตัดเป็นบรรทัดใหม่ */
+}
+
+.minimal-table th {
+    background: #f5f5f5;
+    font-weight: bold;
+}
+
+.minimal-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.minimal-table tr:hover {
+    background: rgba(0, 150, 136, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* จัดการปัญหาภาพ Logo ที่อาจใหญ่เกินไป */
+.logo img {
+    max-width: 100%; /* จำกัดขนาดภาพให้อยู่ในกรอบ */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+}
+

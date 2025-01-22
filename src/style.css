@@ -1,0 +1,271 @@
+/* ใช้ CSS เดิมของคุณ */
+body {
+  background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+.container {
+  width: 90%;
+  /* ใช้ความกว้างเต็มจอ */
+  max-width: 1200px;
+  /* จำกัดความกว้างสูงสุดของ container */
+  margin: 0 auto;
+  /* จัดให้อยู่กึ่งกลางหน้าจอ */
+  padding: 0 16px;
+  /* เพิ่ม Padding ด้านข้างสำหรับความสมดุล */
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 540px;
+  height: auto;
+  padding: 24px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0);
+  transition: 0.4s ease height, 0.4s ease padding, 0.2s border-radius, 0.6s ease box-shadow;
+}
+
+.modal:hover {
+  box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.025);
+}
+
+.modal.active {
+  height: 160px;
+  padding: 32px;
+  border-radius: 48px;
+  gap: 36px;
+}
+
+.modal.expanded {
+  height: auto;
+  /* ปรับขนาดตามเนื้อหา */
+  padding: 32px;
+  border-radius: 48px;
+  transition: all 0.4s ease;
+  /* เพิ่ม transition นุ่มนวล */
+}
+
+.logo {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 300px;
+  right: 360px;
+  top: -32px;
+  transform: scale(0.15);
+  /* ลดขนาดลง 70% */
+}
+
+
+
+.field-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 300px;
+  left: 235px;
+}
+
+.field {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0 12px 2px 12px;
+  background: none;
+  color: #000;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.active .field {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.field::placeholder {
+  opacity: 0.5;
+  color: #000;
+}
+
+.sign {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 14px 2px 12px;
+  background: #3bcc02;
+  color: #fff;
+  border: none;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+
+
+/* ปรับสีปุ่มค้นหา */
+.sign {
+  background-color: #ff0000;
+  /* สีพื้นหลังเริ่มต้น (สีแดง) */
+  cursor: not-allowed;
+}
+
+.sign.active {
+  background-color: #28a745;
+  /* สีพื้นหลังเมื่อกรอกข้อมูลถูกต้อง (สีเขียว) */
+  cursor: pointer;
+}
+
+.sign[disabled] {
+  background-color: #ff0000;
+  /* สีเมื่อไม่สามารถคลิกได้ */
+  pointer-events: none;
+  /* ป้องกันการคลิก */
+}
+
+.sign:not([disabled]) {
+  background-color: #28a745;
+  /* สีเมื่อข้อมูลถูกต้อง */
+}
+
+
+
+
+/* สำหรับมือถือ (ความกว้างสูงสุด 768px) */
+@media (max-width: 768px) {
+  body {
+    background: url('https://img.freepik.com/premium-photo/abstract-blurred-sky-colorful_40299-22.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+  .container {
+    width: 90%;
+    /* ใช้ความกว้างเต็มจอ */
+    max-width: 1200px;
+    /* จำกัดความกว้างสูงสุดของ container */
+    margin: 0 auto;
+    /* จัดให้อยู่กึ่งกลางหน้าจอ */
+    padding: 0 16px;
+    /* เพิ่ม Padding ด้านข้างสำหรับความสมดุล */
+  }
+
+  .modal {
+    margin-top: 280px;
+    position: relative;
+    width: 100%;
+    /* ใช้ 90% ของหน้าจอมือถือ */
+    padding: 16px;
+    /* ลด Padding */
+    border-radius: 20px;
+    /* ลดความโค้ง */
+  }
+
+  .field-wrapper {
+    max-width: 50%;
+    /* ใช้ความกว้างเต็มหน้าจอ */
+    left: 175px;
+    padding: 0 10px;
+    /* เพิ่ม Padding */
+  }
+
+  .field {
+    font-size: 16px;
+    /* ลดขนาดตัวอักษร */
+    padding: 0 8px;
+    /* ลด Padding */
+  }
+
+  .logo {
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    right: 280px;
+    top: -25px;
+    transform: scale(0.12);
+    /* ลดขนาดโลโก้ */
+  }
+
+  #First-name.field {
+    font-size: 12px;
+  }
+
+  .sign {
+    margin-right: 10px;
+    height: 40px;
+    font-size: 14px;
+    padding:10px;
+    /* ลด Padding */
+  }
+
+  .result {
+    margin-top: 20px;
+  }
+
+  .result table {
+    font-size: 12px;
+    /* ลดขนาดตัวอักษรในตาราง */
+  }
+
+  .result-message {
+    position: absolute;
+    top: 550px;
+    width: 300px;
+    padding: 18px;
+    border-radius: 40px;
+    overflow: hidden;
+    color: #22973d;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s ease height, 0.4s ease padding, 0.2s border-radius, 0.6s ease box-shadow;
+  }
+
+  .status {
+    width: 100px;
+    /* ลดความกว้างปุ่ม */
+    font-size: 12px;
+    /* ลดขนาดตัวอักษร */
+    padding: 8px 10px;
+    /* ลด Padding */
+  }
+
+  .export-pdf {
+    width: 100px;
+    /* ลดขนาดปุ่ม */
+    font-size: 12px;
+    /* ลดขนาดตัวอักษร */
+    padding: 8px 10px;
+    /* ลด Padding */
+  }
+
+  .status-page .back-to-main {
+    width: 50%;
+    /* ลดความกว้างปุ่ม */
+    font-size: 12px;
+    /* ลดขนาดตัวอักษร */
+  }
+
+}
