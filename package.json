@@ -1,0 +1,26 @@
+{
+  "name": "QueueMissionS1",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^4.0.1",
+    "express": "^4.21.2",
+    "jsdom": "^25.0.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "node-schedule": "^2.1.1",
+    "open": "^10.1.0",
+    "socket.io": "^4.8.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "ngrok": "^5.0.0-beta.2"
+  },
+  "description": ""
+}

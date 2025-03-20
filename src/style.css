@@ -7,8 +7,6 @@ body {
   background-size: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
-
 .container {
   width: 90%;
   /* ใช้ความกว้างเต็มจอ */
@@ -82,7 +80,6 @@ body {
 }
 
 .field {
-  font-family: "Noto Sans Thai", sans-serif;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -149,7 +146,6 @@ body {
   background-color: #28a745;
   /* สีเมื่อข้อมูลถูกต้อง */
 }
-
 
 
 
@@ -269,3 +265,4 @@ body {
   }
 
 }
+
