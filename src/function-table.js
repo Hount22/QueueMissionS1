@@ -24,7 +24,6 @@ async function loadExcelAndDisplayData() {
             createTable(result, "resultDiv", [
                 ["หมายเลข VN", result[0]],
                 ["ชื่อ-นามสกุล", result[1]],
-                ["ข้อมูลเพิ่มเติม", result[2]],
                 ["วันที่-เวลาลงทะเบียน", `${result[6]} ${result[7]}`],
                 ["วันที่-เวลานัด", `${result[6]} ${result[2]}`],
                 ["รายการนัด", result[12]],
